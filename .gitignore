@@ -88,6 +88,7 @@ hs_err_pid*
 ### Maven ###
 target/
 logs/
+target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -96,6 +97,7 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+<<<<<<< HEAD
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
@@ -119,3 +121,7 @@ gradle-app.setting
 logs/*
 DS_Store
 .DS_Store
+=======
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+>>>>>>> d42cf9bf5d249affa26983c092888500e7d82729
