@@ -24,6 +24,7 @@ public class Teste {
 		// ponto flutuante
 		Conta consDouble = new Conta(50.0);
 		System.out.println(String.format("Agência: %s e Saldo: %s", consDouble.agencia, consDouble.saldo));
+		
 	}
 
 }
