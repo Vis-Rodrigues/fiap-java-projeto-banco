@@ -1,11 +1,25 @@
 package br.com.fiap.banco;
 
+/**
+ * Classe que abstrai uma Conta Bancária
+ * @author inmetrics
+ * @version 1.0
+ */
 public class Conta {
-
-	int numero;
-	int agencia;
-	double saldo;
-	Cliente cliente;
+	
+	/**
+	 * Número da COnta
+	 */
+	public int numero;
+	/**
+	 * Número da Agencia
+	 */
+	public int agencia;
+	/**
+	 * Saldo da conta
+	 */
+	public double saldo;
+	public Cliente cliente;
 	
 	public Conta() {
 	}
@@ -30,14 +44,26 @@ public class Conta {
 		this.agencia = agencia;
 	}
 	
+	/**
+	 * Depositar um valor ao saldo da conta
+	 * @param valor Valor a ser depositado
+	 */
 	public void depositar(double valor) {
 		this.saldo += valor;
 	}
 	
+	/**
+	 * Retira um valor do saldo da conta
+	 * @param valor Valor a ser retirado
+	 */
 	public void retirar(double valor) {
 		this.saldo -= valor;
 	}
 	
+	/**
+	 * Verifica o saldo da conta
+	 * @return Valor do saldo da conta
+	 */
 	public double verificarSaldo() {
 		return this.saldo;
 	}
