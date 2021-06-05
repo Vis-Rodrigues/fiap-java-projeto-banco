@@ -1,13 +1,20 @@
 package br.com.fiap.banco;
 
+import java.io.Serializable;
+
 /**
  * Classe que abstrai uma Conta Bancária
  * 
  * @author inmetrics
  * @version 1.0
  */
-public class Conta {
+public class Conta implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Número da COnta
 	 */
