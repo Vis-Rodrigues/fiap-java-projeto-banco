@@ -1,10 +1,17 @@
 package br.com.fiap.banco;
 
-public class Cliente {
+import java.io.Serializable;
+
+public class Cliente implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
-	public String nome;
-	public byte idade;
-	
+	private String nome;
+	private byte idade;
+
 	// Atalho shift+alt+s
 	public Cliente(String nome, byte idade) {
 		this.nome = nome;
@@ -12,6 +19,22 @@ public class Cliente {
 	}
 
 	public Cliente() {
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public byte getIdade() {
+		return idade;
+	}
+
+	public void setIdade(byte idade) {
+		this.idade = idade;
 	}
 
 }
