@@ -1,4 +1,4 @@
-package br.com.fiap.caixa;
+package br.com.fiap.estrutura;
 
 import java.util.Arrays;
 
