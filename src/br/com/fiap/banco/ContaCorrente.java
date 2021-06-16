@@ -1,5 +1,7 @@
 package br.com.fiap.banco;
 
+import br.com.fiap.excecao.SaldoInsuficienteException;
+
 public class ContaCorrente extends Conta {
 
 	/**
@@ -31,7 +33,7 @@ public class ContaCorrente extends Conta {
 	}
 	
 	@Override
-	public void retirar(double valor) {
+	public void retirar(double valor) throws SaldoInsuficienteException {
 		valor += 10;
 		super.retirar(valor);
 	}

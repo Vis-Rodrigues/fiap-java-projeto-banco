@@ -9,7 +9,8 @@ public class TestePolimorfismo {
 		
 		Conta conta1 = new Conta();
 		conta1.depositar(1000);
-		conta1.retirar(100);
+		try {
+			conta1.retirar(100);
 		
 		ContaCorrente conta2 = new ContaCorrente();
 		conta2.depositar(1000);
@@ -23,6 +24,10 @@ public class TestePolimorfismo {
 		System.out.println("Conta2: "+ conta2.getSaldo());
 		System.out.println("Conta3: "+ conta3.getSaldo());
 		
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

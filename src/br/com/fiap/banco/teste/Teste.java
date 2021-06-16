@@ -16,8 +16,12 @@ public class Teste {
 		}
 		
 		Conta poupanca = new Conta(111,222,1000);
-		poupanca.retirar(50);
-		System.out.println(String.format("Saldo disponível na poupança: %s", poupanca.getSaldo()));
+		try {
+			poupanca.retirar(50);
+			System.out.println(String.format("Saldo disponível na poupança: %s", poupanca.getSaldo()));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		// Foram criados dois construtores na classe, um recebe double e o outro int, o
 		// q vai fazer com q o Java reconheça, que é o construtor double q queremos é o
