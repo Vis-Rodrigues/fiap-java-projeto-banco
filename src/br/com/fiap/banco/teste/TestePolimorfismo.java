@@ -1,13 +1,14 @@
 package br.com.fiap.banco.teste;
 
-import br.com.fiap.banco.Conta;
-import br.com.fiap.banco.ContaCorrente;
+import br.com.fiap.banco.entity.Conta;
+import br.com.fiap.banco.entity.ContaCorrente;
+import br.com.fiap.banco.entity.ContaPoupanca;
 
 public class TestePolimorfismo {
 
 	public static void main(String[] args) {
 		
-		Conta conta1 = new Conta();
+		Conta conta1 = new ContaPoupanca();
 		conta1.depositar(1000);
 		try {
 			conta1.retirar(100);

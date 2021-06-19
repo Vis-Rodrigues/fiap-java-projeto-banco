@@ -1,4 +1,4 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.entity;
 
 import br.com.fiap.excecao.SaldoInsuficienteException;
 
@@ -11,6 +11,7 @@ public class ContaCorrente extends Conta {
 	
 	private String tipo;
 	private double chequeEspecial;
+	private double limite;
 
 	public String getTipo() {
 		return tipo;
@@ -32,10 +33,24 @@ public class ContaCorrente extends Conta {
 		return super.getSaldo() + this.chequeEspecial;
 	}
 	
+	public double getLimite() {
+		return limite;
+	}
+	
+	public void setLimite(double limite) {
+		this.limite = limite;
+	}
+
 	@Override
 	public void retirar(double valor) throws SaldoInsuficienteException {
 		valor += 10;
 		super.retirar(valor);
 	}
+
+	@Override
+	public double verificarSaldo() {
+		return super.getSaldo() + limite;
+	}
+
 	
 }

@@ -1,4 +1,4 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.entity;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ import br.com.fiap.excecao.ValorInvalidoException;
  * @author inmetrics
  * @version 1.0
  */
-public class Conta implements Serializable{
+public abstract class Conta implements Serializable{
 
 	/**
 	 * 
@@ -112,5 +112,7 @@ public class Conta implements Serializable{
 		}
 		this.saldo -= valor;
 	}
+	
+	public abstract double verificarSaldo();
 
 }
