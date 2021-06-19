@@ -1,6 +1,9 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.entity;
 
 import java.io.Serializable;
+
+import br.com.fiap.excecao.SaldoInsuficienteException;
+import br.com.fiap.excecao.ValorInvalidoException;
 
 /**
  * Classe que abstrai uma Conta Bancária
@@ -8,7 +11,7 @@ import java.io.Serializable;
  * @author inmetrics
  * @version 1.0
  */
-public class Conta implements Serializable{
+public abstract class Conta implements Serializable{
 
 	/**
 	 * 
@@ -91,6 +94,9 @@ public class Conta implements Serializable{
 	 *            Valor a ser depositado
 	 */
 	public void depositar(double valor) {
+		if(valor < 0) {
+			throw new ValorInvalidoException();
+		}
 		this.saldo += valor;
 	}
 
@@ -100,8 +106,13 @@ public class Conta implements Serializable{
 	 * @param valor
 	 *            Valor a ser retirado
 	 */
-	public void retirar(double valor) {
+	public void retirar(double valor) throws SaldoInsuficienteException{
+		if(valor > saldo) {
+			throw new SaldoInsuficienteException("Saldo insuficiente");
+		}
 		this.saldo -= valor;
 	}
+	
+	public abstract double verificarSaldo();
 
 }
